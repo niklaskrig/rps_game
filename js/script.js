@@ -19,19 +19,10 @@ result_div.style.fontSize = "40px"
 
 startButton.addEventListener('click', function () {
     game("startGame")
- 
+
 })
 
 
-startButton.addEventListener('click', function () {
-    if (userName.value === null || userName.value === "") {
-    container.style.display="none"
-    }
-    else{
-        yourName.innerHTML = "Hello" + ' ' + userName.value + "!";
-        container.style.display="block"
-    }
-})
 
 restart.addEventListener('click', function () {
     game("restart")
@@ -80,6 +71,16 @@ function restarting() {
 }
 
 function game(userChoice) {
+    startButton.addEventListener('click', function () {
+        if (userName.value === null || userName.value === "") {
+            container.style.display = "none"
+        }
+        else {
+            yourName.innerHTML = "Hello" + ' ' + userName.value + "!";
+            container.style.display = "block"
+        }
+    })
+
     if (userName.value === null || userName.value === "") {
         alert("Please enter a name!");
     }
@@ -89,7 +90,6 @@ function game(userChoice) {
             images_div.style.opacity = 1;
             images_div.style.transition = "200ms";
             restart.style.opacity = 1;
-            console.log(userName.value)
         }
         if (userChoice === "r") {
             if (computerChoice === "r") {
