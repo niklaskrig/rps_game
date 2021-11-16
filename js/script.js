@@ -19,12 +19,18 @@ result_div.style.fontSize = "40px"
 
 startButton.addEventListener('click', function () {
     game("startGame")
+ 
 })
 
+
 startButton.addEventListener('click', function () {
-    yourName.innerHTML = "Hello" + ' ' + userName.value + "!";
-    nameEntry.style.display = "none";
-    container.style.display="block"
+    if (userName.value === null || userName.value === "") {
+    container.style.display="none"
+    }
+    else{
+        yourName.innerHTML = "Hello" + ' ' + userName.value + "!";
+        container.style.display="block"
+    }
 })
 
 restart.addEventListener('click', function () {
@@ -83,6 +89,7 @@ function game(userChoice) {
             images_div.style.opacity = 1;
             images_div.style.transition = "200ms";
             restart.style.opacity = 1;
+            console.log(userName.value)
         }
         if (userChoice === "r") {
             if (computerChoice === "r") {
