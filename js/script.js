@@ -14,6 +14,7 @@ const userName = document.querySelector(".tjena")
 const message = document.querySelector(".action-message")
 let yourName = document.querySelector("#yourname")
 const nameEntry = document.querySelector(".name-entry")
+const container = document.querySelector(".container")
 result_div.style.fontSize = "40px"
 
 startButton.addEventListener('click', function () {
@@ -21,10 +22,9 @@ startButton.addEventListener('click', function () {
 })
 
 startButton.addEventListener('click', function () {
-
     yourName.innerHTML = "Hello" + ' ' + userName.value + "!";
     nameEntry.style.display = "none";
-
+    container.style.display="block"
 })
 
 restart.addEventListener('click', function () {
