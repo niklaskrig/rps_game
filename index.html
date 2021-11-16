@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, paper & Scissors</title>
+    <title>Sten, Sax & Påse</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -22,24 +22,24 @@
         </div>
 
         <div class="name-entry">
-            <input class="tjena" id="namnknapp" type="text" placeholder="Enter your name.."></input>
-            <button type="button" id="button2">Start game!</button>
+            <input class="tjena" id="namnknapp" type="text" placeholder="Skriv ditt namn .."></input>
+            <button type="button" id="button2">Börja spelet!</button>
         </div>
+        <div class="container">
+            <div class="result">
+                <p></p>
+            </div>
 
-        <div class="result">
-            <p></p>
+            <div class="choices">
+                <h3 id="yourname"></h3>
+                <p id="action-message">Make your move</p>
+                <div class="choice" id="r"><img src="img/rock.png" alt=""></div>
+                <div class="choice" id="p"><img src="img/paper.png" alt=""></div>
+                <div class="choice" id="s"><img src="img/scissors.png" alt=""></div>
+            </div>
+
+            <input type="button" id="restart"><button id="restart2">Restart</button>
         </div>
-
-        <div class="choices">
-            <h3 id="yourname"></h3>
-            <p id="action-message">Make your move</p>
-            <div class="choice" id="r"><img src="img/rock.png" alt=""></div>
-            <div class="choice" id="p"><img src="img/paper.png" alt=""></div>
-            <div class="choice" id="s"><img src="img/scissors.png" alt=""></div>
-        </div>
-
-        <input type="button" id="restart"><button id="restart2">Restart</button>
-
     </main>
     <script src="js/script.js" defer></script>
 </body>
